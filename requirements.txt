@@ -1,0 +1,7 @@
+django
+gunicorn
+django-heroku
+pyTelegramBotAPI
+python-telegram-bot
+requests
+bs4
