@@ -87,11 +87,59 @@ def get_text_messages(message):
         # И добавляем кнопку на экран
         keyboard.add(key_1_channel)
         
-        #key_5_channel = types.InlineKeyboardButton(text='5 канал', callback_data='5_channel')
-        #keyboard.add(key_5_channel)
+        key_5_channel = types.InlineKeyboardButton(text='5 канал', callback_data='5_channel')
+        keyboard.add(key_5_channel)
         
         key_matchtv_channel = types.InlineKeyboardButton(text='МАТЧ ТВ!', callback_data='matchtv_channel')
         keyboard.add(key_matchtv_channel)
+        
+        key_2x2_channel = types.InlineKeyboardButton(text='2x2', callback_data='2x2_channel')
+        keyboard.add(key_2x2_channel)
+        
+        key_ntv_channel = types.InlineKeyboardButton(text='НТВ', callback_data='ntv_channel')
+        keyboard.add(key_ntv_channel)
+        
+        key_kultura_channel = types.InlineKeyboardButton(text='Культура', callback_data='kultura_channel')
+        keyboard.add(key_kultura_channel)
+        
+        key_rossia_24_channel = types.InlineKeyboardButton(text='Россия24', callback_data='rossia_24_channel')
+        keyboard.add(key_rossia_24_channel)
+        
+        key_otr_channel = types.InlineKeyboardButton(text='ОТР', callback_data='otr_channel')
+        keyboard.add(key_otr_channel)
+        
+        key_tvc_channel = types.InlineKeyboardButton(text='ТВЦ', callback_data='tvc_channel')
+        keyboard.add(key_tvc_channel)
+        
+        key_rentv_channel = types.InlineKeyboardButton(text='РЕН ТВ', callback_data='rentv_channel')
+        keyboard.add(key_rentv_channel)
+        
+        key_domashnij_channel = types.InlineKeyboardButton(text='Домашний', callback_data='domashnij_channel')
+        keyboard.add(key_domashnij_channel)
+        
+        key_tv3_channel = types.InlineKeyboardButton(text='ТВ3', callback_data='tv3_channel')
+        keyboard.add(key_tv3_channel)
+        
+        key_pyatnica_channel = types.InlineKeyboardButton(text='Пятница', callback_data='pyatnica_channel')
+        keyboard.add(key_pyatnica_channel)
+        
+        key_zvezda_channel = types.InlineKeyboardButton(text='Звезда', callback_data='zvezda_channel')
+        keyboard.add(key_zvezda_channel)
+        
+        key_tnt_channel = types.InlineKeyboardButton(text='ТНТ', callback_data='tnt_channel')
+        keyboard.add(key_tnt_channel)
+        
+        key_che_channel = types.InlineKeyboardButton(text='Че', callback_data='che_channel')
+        keyboard.add(key_che_channel)
+        
+        key_super_channel = types.InlineKeyboardButton(text='Супер', callback_data='super_channel')
+        keyboard.add(key_super_channel)
+        
+        key_tv1000_channel = types.InlineKeyboardButton(text='ТВ1000', callback_data='tv1000_channel')
+        keyboard.add(key_tv1000_channel)
+        
+        key_kinotv_channel = types.InlineKeyboardButton(text='Кино ТВ', callback_data='kinotv_channel')
+        keyboard.add(key_kinotv_channel)
         
         
         # Показываем все кнопки сразу и пишем сообщение о выборе
@@ -109,10 +157,42 @@ def callback_worker(call):
     # Если нажали на одну из кнопок — выводим телепрограмму
     if call.data == '1_channel': 
         bot.send_message(call.message.chat.id, get_tv_tmtbl(url_1_channel))
-    #if call.data == '5_channel': 
-    #    bot.send_message(call.message.chat.id, get_tv_tmtbl(url_5_channel))
+    if call.data == '5_channel': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_5_channel))
     if call.data == 'matchtv_channel': 
         bot.send_message(call.message.chat.id, get_tv_tmtbl(url_matchtv_channel))
+    if call.data == '2x2_channel': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_2x2_channel))
+    if call.data == 'ntv_channel': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_ntv_channel))
+    if call.data == 'kultura_channel': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_kultura_channel))
+    if call.data == 'rossia_24_channel': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_rossia_24_channel))
+    if call.data == 'otr_channel': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_otr_channel))
+    if call.data == 'tvc_channel': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_tvc_channel))
+    if call.data == 'rentv_channel': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_rentv_channel))
+    if call.data == 'domashnij_channel': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_domashnij_channel))
+    if call.data == 'tv3_channel': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_tv3_channel))
+    if call.data == 'pyatnica_channel': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_pyatnica_channel))
+    if call.data == 'zvezda_channel': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_zvezda_channel))
+    if call.data == 'tnt_channel': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_tnt_channel))
+    if call.data == 'che_channel': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_che_channel))
+    if call.data == 'super_channel': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_super_channel))
+    if call.data == 'tv1000_channel': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_tv1000_channel))
+    if call.data == 'kinotv': 
+        bot.send_message(call.message.chat.id, get_tv_tmtbl(url_kinotv_channel))
 
 # Запускаем постоянный опрос бота в Телеграме
 
