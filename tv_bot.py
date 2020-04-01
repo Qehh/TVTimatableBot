@@ -27,9 +27,9 @@ def get_tv_tmtbl(url):
     
 s = datetime.datetime.now().date()
 print(s)
-url_1_channel = 'https://tv.yandex.ru/channel/pervyy-16?date=' + str(s) # текущая дата
-url_5_channel = 'https://tv.yandex.ru/channel/pyatyy-kanal-12?date=' + str(s)
-url_tnt_channel = 'https://tv.yandex.ru/channel/tnt-33?date=' + str(s)
+url_1_channel = 'https://tv.yandex.ru/channel/pervyy-16'
+url_5_channel = 'https://tv.yandex.ru/channel/pyatyy-kanal-12'
+url_tnt_channel = 'https://tv.yandex.ru/channel/tnt-33'
 
 print(get_tv_tmtbl(url_tnt_channel))
 
