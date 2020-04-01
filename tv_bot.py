@@ -77,7 +77,7 @@ bot = telebot.TeleBot('956916797:AAETCR1iz_xmzy9mAZ2ledU5ZTDTVpV38sU')
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
     # Если написали «Привет»
-    #if message.text == "Привет":
+    if message.text == "Привет":
         # Пишем приветствие
         bot.send_message(message.from_user.id, "Привет, здесь будет ТВ программа на сегодня")
         # Готовим кнопки
@@ -145,10 +145,10 @@ def get_text_messages(message):
         # Показываем все кнопки сразу и пишем сообщение о выборе
         bot.send_message(message.from_user.id, text='Выберите канал:', reply_markup=keyboard)
     
-    #elif message.text == "/help":
-    #    bot.send_message(message.from_user.id, "Напиши Привет")
-    #else:
-    #    bot.send_message(message.from_user.id, "Я тебя не понимаю. Напиши /help.")
+    elif message.text == "/help":
+        bot.send_message(message.from_user.id, "Напиши Привет")
+    else:
+        bot.send_message(message.from_user.id, "Я тебя не понимаю. Напиши /help.")
         
 # Обработчик нажатий на кнопки
 @bot.callback_query_handler(func=lambda call: True)
@@ -191,7 +191,7 @@ def callback_worker(call):
         bot.send_message(call.message.chat.id, get_tv_tmtbl(url_super_channel))
     if call.data == 'tv1000_channel': 
         bot.send_message(call.message.chat.id, get_tv_tmtbl(url_tv1000_channel))
-    if call.data == 'kinotv': 
+    if call.data == 'kinotv_channel': 
         bot.send_message(call.message.chat.id, get_tv_tmtbl(url_kinotv_channel))
 
 # Запускаем постоянный опрос бота в Телеграме
